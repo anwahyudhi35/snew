@@ -44,6 +44,13 @@
                     </a>
                 </li>
 
+                <li <?php if (isset($_GET['ap']) && $_GET['ap']=="data_bulanan") echo "class='active'";?> >
+                    <a href="?ap=data_bulanan">
+                        <i class="pe-7s-folder"></i>
+                        <P>Data Bulanan</P>
+                    </a>
+                </li>
+
                 <li <?php if (isset($_GET['ap']) && $_GET['ap']=="menu_awal") echo "class='active'";?> >
                     <a href="?ap=menu_awal">
                         <i class="pe-7s-refresh"></i>

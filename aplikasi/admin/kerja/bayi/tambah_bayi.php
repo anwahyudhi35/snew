@@ -18,16 +18,7 @@
 								echo date('Y-m-d');
 								?>">
 						  </div>
-						  
-						  <div class="form-group">
-							<label>Berat Bayi (kilogram)</label>
-							<input type="number" required name="berat" class="form-control" placeholder="Berat Badan Bayi" min="0" step="any">
-						</div>
 
-						<div class="form-group">
-							<label>Tinggi Bayi (Centimeter)</label>
-							<input type="number" required name="tinggi" class="form-control" placeholder="Tinggi Badan Bayi" min="0" step="any">
-						</div>
 						<div class="form-group">
 							<label>Jenis Kelamin</label>
 							<br>
@@ -38,16 +29,6 @@
 							</div>
 						</div>
 							<br>
-							
-							<div class="form-group">
-							<label>Lingkar Kepala (Centimeter)</label>
-							<input type="number" required name="kepala" class="form-control" placeholder="Lingkar Kepala Bayi" min="0" step="any">
-							</div>
-
-							<div class="form-group">
-							<label>Lingkar Lengan Bayi (Centimeter)</label>
-							<input type="number" required name="lengan" class="form-control" placeholder="Lingkar Lengan Bayi" min="0" step="any">
-							</div>
 							
 							<div class="form-group">
 							<label>Nama Ayah Bayi</label>

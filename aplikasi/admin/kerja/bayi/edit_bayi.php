@@ -22,20 +22,9 @@
 
 						<div class="form-group">
 							<label>Tanggal Lahir Bayi</label>
-							<input type="date" required name="lahir" class="form-control" value="<?php echo $data['tgl_lahir']; ?>" max="<?php
-echo date('Y-m-d');
-?>">
+							<input type="date" required name="lahir" class="form-control" value="<?php echo $data['tgl_lahir']; ?>" max="<?php echo date('Y-m-d'); ?>">
 						  </div>
 						  
-						  <div class="form-group">
-							<label>Berat Bayi (gram)</label>
-							<input type="number" required name="berat" class="form-control" placeholder="Berat Badan Bayi" min="0" step = "any" value="<?php echo $data['berat']; ?>">
-						</div>
-
-						<div class="form-group">
-							<label>Tinggi Bayi (Centimeter)</label>
-							<input type="number" required name="tinggi" class="form-control" placeholder="Tinggi Badan Bayi" min="0" step = "any" value="<?php echo $data['tinggi']; ?>">
-						</div>
 
 						<div class="form-group">
 							<label>Jenis Kelamin</label>
@@ -59,16 +48,6 @@ echo date('Y-m-d');
                                 ?>	
 							</div>
 							<br>
-						</div>
-
-						<div class="form-group">
-							<label>Lingkar Kepala Bayi (Centimeter)</label>
-							<input type="number" required name="kepala" class="form-control" placeholder="Ukuran Lingkar Kepala Bayi" min="0" step = "any" value="<?php echo $data['linkar_kepala']; ?>">
-						</div>
-
-						<div class="form-group">
-							<label>Lingkar Lengan Bayi (Centimeter)</label>
-							<input type="number" required name="lengan" class="form-control" placeholder="Ukuran Lingkar Lengan Bayi" min="0" step = "any" value="<?php echo $data['lingkar_lengan']; ?>">
 						</div>
 
 						<div class="form-group">
