@@ -20,7 +20,7 @@
                             $pilihan = mysqli_query($dbh, $query);
                         
                             while($row = mysqli_fetch_array($pilihan)){
-                                   ?> <option value="<?php echo $row['urut'] ?>"><?php echo $row['nama']?></option>
+                                   ?> <option value="<?php echo $row['urut']; ?>"><?php echo $row['nama']; ?></option>
                             <?php }
                         ?>
                         </select>                        
