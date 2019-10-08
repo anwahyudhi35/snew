@@ -1,5 +1,12 @@
 <?php 
     include '../../koneksi.php';
+    $urut = $_GET['urut'];
+	$query=mysqli_query($dbh,"select * from bayi where urut='$urut'");
+    $data=mysqli_fetch_array($query);
+    $query1 = "select * from bulanan where id_bayi = '$urut' ";
+    $pilihan = mysqli_query($dbh, $query1);
+    $data1 = mysqli_fetch_array($pilihan);
+
 ?>
 
 
@@ -7,41 +14,32 @@
 	<div class="col-md-12">
 		<div class="panel panel-default">
 			<div class="panel-body">				
-                <form method="POST" action="?ap=input_bulanan_proses" class="row">
+                <form method="POST" action="?ap=edit_bulanan_proses&id_bayi=<?php echo $data1['id_data'];?>" class="row">
 					<div class="col-lg-12">
 					<div class="col-sm-6">	
 
 					  	<div class="form-group">
 							<label>Nama Bayi</label>
-							<select name="bayinya">
-                        <?php 
-                            $query = "select * from bayi";
-
-                            $pilihan = mysqli_query($dbh, $query);
-                        
-                            while($row = mysqli_fetch_array($pilihan)){
-                                   ?> <option value="<?php echo $row['urut']; ?>"><?php echo $row['nama']; ?></option>
-                            <?php }
-                        ?>
-                        </select>                        
+	                        <input type="text" value="<?php echo $data['nama'];?>" readonly name="bayinya">                   
                         </div>
 
                         <div class="form-group">
+                                <label> Bulan </label>
+                              <input type="number" value="6" name="bulanan" readonly>
+                     </div>
+
+                        <div class="form-group">
                                 <label> Berat Badan </label>
-                                <input type="number" required name="berat" class="form-control" placeholder="bulan" min="0">
+                                <input type="number" required name="berat" class="form-control" placeholder="bulan" min="0" step="0.1" value="<?php echo $data1['berat_bayi']; ?>" >
 							
                         </div>
 
                         <div class="form-group">
                                 <label> Tinggi Badan </label>
-                                <input type="number" required name="tinggi" class="form-control" placeholder="bulan" min="0">
+                                <input type="number" required name="tinggi" class="form-control" placeholder="bulan" min="0" value="<?php echo $data1['tinggi_bayi']; ?>" >
 							
                         </div>
 
-                        <div class="form-group">
-                                <label> Bulan </label>
-                                <input type="text" required name="bulan" class="form-control" placeholder="bulan" readonly value="6">
-                        </div>
 
                         
 						<br>

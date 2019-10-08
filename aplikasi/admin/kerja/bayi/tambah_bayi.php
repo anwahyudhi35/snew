@@ -31,14 +31,10 @@
 							<br>
 							
 							<div class="form-group">
-							<label>Nama Ayah Bayi</label>
+							<label>Nama Orangtua Bayi</label>
 							<input type="text" required name="ayah" class="form-control" placeholder="Nama Ayah Bayi">
 							</div>
 
-							<div class="form-group">
-							<label>Nama Bunda Bayi</label>
-							<input type="text" required name="ibu" class="form-control" placeholder="Nama Ibu Bayi">
-							</div>
 						</div>
 
 						

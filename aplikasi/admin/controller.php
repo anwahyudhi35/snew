@@ -30,6 +30,8 @@ if(isset($_GET['ap'])){
 		include "kerja/bayi/bulan/proses_bulanan.php";	
 	}elseif($ap=="edit_bulanan"){
 		include "kerja/bayi/bulan/edit_bulanan.php";
+	}elseif($ap=="edit_bulanan_proses"){
+		include "kerja/bayi/bulan/edit_bulanan_proses.php";
 	}elseif($ap=="hapus_bulanan"){
 		include "kerja/bayi/bulan/hapus_bulanan.php";
 	}elseif($ap=="data_bulanan"){

@@ -19,6 +19,8 @@
                     echo "<h3>Data Kriteria Bayi</h3>";
                 else if (isset($_GET['ap']) && $_GET['ap']=="data_bulanan")      
                     echo "<h3>Data Bulanan Bayi</h3>";
+                else if (isset($_GET['ap']) && $_GET['ap']=="edit_bulanan")      
+                    echo "<h3>Ubah Data Bulanan Bayi</h3>";
                     
                     //section akun/admin
                 else if (isset($_GET['ap']) && $_GET['ap']=="data_admin") 

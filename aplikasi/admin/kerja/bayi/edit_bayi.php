@@ -51,13 +51,8 @@
 						</div>
 
 						<div class="form-group">
-							<label>Nama Ayah Bayi</label>
-							<input type="text" required name="ayah" class="form-control" placeholder="Nama Ayah Bayi" value="<?php echo $data['ayah']; ?>">
-						</div>
-
-						<div class="form-group">
-							<label>Nama Bunda Bayi</label>
-							<input type="text" required name="bunda" class="form-control" placeholder="Nama Bunda Bayi" value="<?php echo $data['ibu']; ?>">
+							<label>Nama Orangtua Bayi</label>
+							<input type="text" required name="ayah" class="form-control" placeholder="Nama Ayah Bayi" value="<?php echo $data['orangtua']; ?>">
 						</div>
 
 						<div class="form-group">

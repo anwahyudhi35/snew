@@ -39,13 +39,7 @@ include "../../koneksi.php";
 								<th colspan="2" scope="colgroup">April</th>
 								<th colspan="2" scope="colgroup">Mei</th>
 								<th colspan="2" scope="colgroup">Juni</th>
-								<th colspan="2" scope="colgroup">Juli</th>
-								<th colspan="2" scope="colgroup">Agustus</th>
-								<th colspan="2" scope="colgroup">September</th>
-								<th colspan="2" scope="colgroup">Oktober</th>
-								<th colspan="2" scope="colgroup">November</th>
-								<th colspan="2" scope="colgroup">Desember</th>
-							    <th rowspan="2">Aksi</th>	
+								<th rowspan="2">Aksi</th>	
 							</tr>
 							<tr>
 								<th>Berat</th>
@@ -60,18 +54,7 @@ include "../../koneksi.php";
 								<th>Tinggi</th>
 								<th>Berat</th>
 								<th>Tinggi</th>
-								<th>Berat</th>
-								<th>Tinggi</th>
-								<th>Berat</th>
-								<th>Tinggi</th>
-								<th>Berat</th>
-								<th>Tinggi</th>
-								<th>Berat</th>
-								<th>Tinggi</th>
-								<th>Berat</th>
-								<th>Tinggi</th>
-								<th>Berat</th>
-								<th>Tinggi</th>
+								
 							</tr>
 						    </thead>
 						    <tbody>
@@ -91,38 +74,43 @@ include "../../koneksi.php";
 								<td><?php echo $data['nama']; ?></td>
                                 <td><?php echo $data['kelamin']; ?></td>
                                 <td><?php echo $data['lahir']; ?></td>
-								<td></td>
-								<td></td>
-								<td></td>
-								<td></td>
-								<td></td>
-								<td></td>
-								<td></td>
-								<td></td>
-								<td></td>
-								<td></td>
-								<td></td>
-								<td></td>
-								<td></td>
-								<td></td>
-								<td></td>
-								<td></td>
-								<td></td>
-								<td></td>
-								<td></td>
-								<td></td>
-								<td></td>
-								<td></td>
-								<td></td>
-								<td></td>
+							<?php 
+								$bulanan1 = mysqli_query($dbh, "SELECT * FROM bulanan WHERE id_bayi = '$data[urut]' && bulan_data=1");
+								$bulanan2 = mysqli_query($dbh, "SELECT * FROM bulanan WHERE id_bayi = '$data[urut]' && bulan_data=2");
+								$bulanan3 = mysqli_query($dbh, "SELECT * FROM bulanan WHERE id_bayi = '$data[urut]' && bulan_data=3");
+								$bulanan4 = mysqli_query($dbh, "SELECT * FROM bulanan WHERE id_bayi = '$data[urut]' && bulan_data=4");
+								$bulanan5 = mysqli_query($dbh, "SELECT * FROM bulanan WHERE id_bayi = '$data[urut]' && bulan_data=5");
+								$bulanan6 = mysqli_query($dbh, "SELECT * FROM bulanan WHERE id_bayi = '$data[urut]' && bulan_data=6");
+								
+
+							
+								$bulananb1= mysqli_fetch_array($bulanan1);
+								$bulananb2= mysqli_fetch_array($bulanan2);
+								$bulananb3= mysqli_fetch_array($bulanan3);
+								$bulananb4= mysqli_fetch_array($bulanan4);
+								$bulananb5= mysqli_fetch_array($bulanan5);
+								$bulananb6= mysqli_fetch_array($bulanan6);
+							?>
+								<td> <?php echo $bulananb1['berat_bayi']; ?></td>
+								<td> <?php echo $bulananb1['tinggi_bayi']; ?></td>
+								<td> <?php echo $bulananb2['berat_bayi'] ;?></td>
+								<td> <?php echo $bulananb2['tinggi_bayi']; ?></td>
+								<td> <?php echo $bulananb3['berat_bayi'] ;?></td>
+								<td> <?php echo $bulananb3['tinggi_bayi'] ;?></td>
+								<td> <?php echo $bulananb4['berat_bayi'] ;?></td>
+								<td> <?php echo $bulananb4['tinggi_bayi'] ;?></td>
+								<td> <?php echo $bulananb5['berat_bayi'] ;?></td>
+								<td> <?php echo $bulananb5['tinggi_bayi'] ;?></td>
+								<td> <?php echo $bulananb6['berat_bayi'] ;?></td>
+								<td> <?php echo $bulananb6['tinggi_bayi'] ;?></td>
 								
 								<td>
-								<a href="?ap=edit_bayi&urut=<?php echo $data['urut']; ?>" class="btn btn-info btn-sm btn-fill">
-                                        <span class="glyphicon glyphicon-pencil"></span> Ubah Data Bayi 
+								<a href="?ap=edit_bulanan&urut=<?php echo $data['urut']; ?>" class="btn btn-info btn-sm btn-fill">
+                                        <span class="glyphicon glyphicon-pencil"></span> Ubah Data Bulanan Bayi 
 									</a>   
 								<p></p>
-								<a class="btn btn-warning btn-sm btn-fill" href="?ap=hapus_bayi&urut=<?php echo $data['urut']; ?>" onclick="return confirm('Apa anda yakin dengan penghapusan data?');">
-                                        <span class="glyphicon glyphicon-trash"></span> Hapus Data Bayi 
+								<a class="btn btn-warning btn-sm btn-fill" href="?ap=hapus_bulanan&urut=<?php echo $data['urut']; ?>" onclick="return confirm('Apa anda yakin dengan penghapusan data?');">
+                                        <span class="glyphicon glyphicon-trash"></span> Hapus Data Bulanan Bayi 
 									</a>
 								</td>
 							<?php

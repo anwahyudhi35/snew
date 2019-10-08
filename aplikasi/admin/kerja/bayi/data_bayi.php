@@ -30,8 +30,8 @@ include "../../koneksi.php";
                                 <th>Jenis Kelamin</th>
                                 <th>Tanggal Lahir</th>
 								<th>Umur (Bulan)</th>
-                                <th>Nama Ayah</th>
-                                <th>Nama Bunda</th>
+                                <th>Nama Orantua</th>
+                                
 							    <th>Aksi</th>
 						    </tr>
 						    </thead>
@@ -53,8 +53,8 @@ include "../../koneksi.php";
                                 <td><?php echo $data['kelamin']; ?></td>
                                 <td><?php echo $data['lahir']; ?></td>
 								<td><?php echo $data['umur']; ?></td>
-								<td><?php echo $data['ayah']; ?></td>
-								<td><?php echo $data['ibu']; ?></td>  
+								<td><?php echo $data['orangtua']; ?></td>
+								  
                                 <td>
 								<a href="?ap=edit_bayi&urut=<?php echo $data['urut']; ?>" class="btn btn-info btn-sm btn-fill">
                                         <span class="glyphicon glyphicon-pencil"></span> Ubah Data Bayi 
